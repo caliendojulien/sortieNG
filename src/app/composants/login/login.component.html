@@ -1,0 +1,20 @@
+<p-panel header="Connexion">
+  <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm(loginForm.value)">
+    <div class="flex flex-wrap justify-content-center align-items-center gap-4">
+      <span class="p-input-icon-left p-float-label mt-2">
+        <i class="pi pi-user"></i>
+        <input type="text" name="email" id="email" formControlName="email" pInputText>
+        <label for="email">Email : </label>
+      </span>
+      <span class="p-input-icon-left p-float-label mt-2">
+        <i class="pi pi-ellipsis-h"></i>
+        <p-password id="mdp" formControlName="password" [feedback]="false" [toggleMask]="true"></p-password>
+        <label for="mdp">Mot de passe : </label>
+      </span>
+      <span>
+        <p-button label="Se connecter" styleClass="p-button-outlined mt-2" [disabled]="!loginForm.valid"
+                  (click)="submitLoginForm(loginForm.value)"></p-button>
+      </span>
+    </div>
+  </form>
+</p-panel>

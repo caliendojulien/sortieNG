@@ -1,0 +1,7 @@
+<div class="flex h-4rem">
+  <p-dock [model]="liens" [position]="'top'">
+    <ng-template pTemplate="lien" let-lien>
+      <img [src]="lien.icon" [alt]="lien.label"/>
+    </ng-template>
+  </p-dock>
+</div>
