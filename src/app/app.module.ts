@@ -17,6 +17,8 @@ import {BarreDeNavComponent} from './composants/barre-de-nav/barre-de-nav.compon
 import {DockModule} from "primeng/dock";
 import {LogoutComponent} from './composants/logout/logout.component';
 import {PasswordModule} from "primeng/password";
+import {RechercheSortieComponent} from './composants/recherche-sortie/recherche-sortie.component';
+import {CheckboxModule} from "primeng/checkbox";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import {PasswordModule} from "primeng/password";
     LoginComponent,
     SortiesComponent,
     BarreDeNavComponent,
-    LogoutComponent
+    LogoutComponent,
+    RechercheSortieComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import {PasswordModule} from "primeng/password";
     FieldsetModule,
     ButtonModule,
     DockModule,
-    PasswordModule
+    PasswordModule,
+    CheckboxModule
   ],
   providers: [
     {
