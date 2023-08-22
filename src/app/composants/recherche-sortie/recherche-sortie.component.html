@@ -1,47 +1,46 @@
-<p-panel header="Recherche"
-         class="zoomindown animation-duration-1000 flex min-w-screen justify-content-center">
-  <form [formGroup]="rechercheForm" class="min-w-screen">
-    <div class="grid">
-      <div class="col-6">
-      <span class="p-float-label mt-2">
+<div
+  class="zoomindown animation-duration-1000 card">
+  <form [formGroup]="rechercheForm"
+        class="formgrid grid">
+    <div class="col">
+      <span class="p-float-label field">
         <input type="text" name="site" id="site" formControlName="site" pInputText>
         <label for="site">Site : </label>
       </span>
-        <span class="p-float-label mt-2">
+      <span class="p-float-label field">
         <input type="text" name="nom" id="nom" formControlName="nom" pInputText>
         <label for="nom">nom : </label>
       </span>
-        <span class="p-float-label mt-2">
+      <span class="p-float-label field">
         <input type="text" name="debut" id="debut" formControlName="debut" pInputText>
         <label for="debut">debut : </label>
       </span>
-        <span class="p-float-label mt-2">
+      <span class="p-float-label field">
         <input type="text" name="fin" id="fin" formControlName="fin" pInputText>
         <label for="fin">fin : </label>
       </span>
+    </div>
+    <div class="col">
+      <div class="field">
+        <p-checkbox name="jesuisorga" id="jesuisorga" formControlName="jesuisorga" [binary]="true"
+                    label="Je suis organisateur"></p-checkbox>
       </div>
-      <div class="col-6">
-      <span class="p-float-label mt-2">
-        <p-checkbox name="jesuisorga" id="jesuisorga" formControlName="jesuisorga"></p-checkbox>
-        <label for="jesuisorga">jesuisorga : </label>
-      </span>
-        <span class="p-float-label mt-2">
-        <p-checkbox name="jesuisinscrit" id="jesuisinscrit" formControlName="jesuisinscrit"></p-checkbox>
-        <label for="jesuisinscrit">jesuisinscrit : </label>
-      </span>
-        <span class="p-float-label mt-2">
-        <p-checkbox name="jenesuispasinscrit" id="jenesuispasinscrit" formControlName="jenesuispasinscrit"></p-checkbox>
-        <label for="jenesuispasinscrit">jenesuispasinscrit : </label>
-      </span>
-        <span class="p-float-label mt-2">
-        <p-checkbox name="passees" id="passees" formControlName="passees"></p-checkbox>
-        <label for="passees">passees : </label>
-      </span>
-        <span>
+      <div class="field">
+        <p-checkbox name="jesuisinscrit" id="jesuisinscrit" formControlName="jesuisinscrit"
+                    [binary]="true" label="Je suis inscrit"></p-checkbox>
+      </div>
+      <div class="field">
+        <p-checkbox name="jenesuispasinscrit" id="jenesuispasinscrit" formControlName="jenesuispasinscrit"
+                    [binary]="true" label="Je ne suis pas inscrit"></p-checkbox>
+      </div>
+      <div class="field">
+        <p-checkbox name="passees" id="passees" formControlName="passees" [binary]="true"
+                    label="Sorties passées"></p-checkbox>
+      </div>
+      <div>
         <p-button label="Rechercher" styleClass="p-button-outlined mt-2"
                   (click)="submitRechercheForm(rechercheForm.value)"></p-button>
-      </span>
       </div>
     </div>
   </form>
-</p-panel>
+</div>
